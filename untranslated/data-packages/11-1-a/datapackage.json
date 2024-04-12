@@ -1,0 +1,61 @@
+{
+  "resources": [
+    {
+      "path": "data.csv",
+      "name": "data",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "integer"
+          },
+          {
+            "name": "Units",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "hectre per day",
+                ""
+              ]
+            }
+          },
+          {
+            "name": "Series",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "moving four-year average",
+                "calculated annual values",
+                ""
+              ]
+            }
+          },
+          {
+            "name": "type of area",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "transport area",
+                "settlement area (built on)",
+                "recreation area, cemetery",
+                ""
+              ]
+            }
+          },
+          {
+            "name": "Value",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ],
+  "profile": "data-package",
+  "name": "11-1-a",
+  "title": "Anstieg der Siedlungs- und Verkehrsfläche"
+}

@@ -1,0 +1,66 @@
+{
+  "resources": [
+    {
+      "path": "data.csv",
+      "name": "data",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "integer",
+            "title": "Jahr"
+          },
+          {
+            "name": "Units",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Prozent",
+                ""
+              ]
+            },
+            "title": "Units"
+          },
+          {
+            "name": "Series",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Tertiärer oder postsekundarer nicht-tertiärer Abschluss",
+                "Fachkräftepotential mit beruflichem Abschluss",
+                ""
+              ]
+            },
+            "title": "Series"
+          },
+          {
+            "name": "Art der Klassifizierung",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "Zweitausbildung, Ausbildung nach Abitur",
+                "Höherqualifizierende Berufsbildung",
+                "Hochschulabschlüsse",
+                ""
+              ]
+            },
+            "title": "Art der Klassifizierung"
+          },
+          {
+            "name": "Value",
+            "type": "number",
+            "title": "Value"
+          }
+        ]
+      }
+    }
+  ],
+  "profile": "data-package",
+  "name": "4-1-b",
+  "title": "Akademisch Qualifizierte und beruflich Höherqualifizierte"
+}
